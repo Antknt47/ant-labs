@@ -5,6 +5,14 @@ const CardItem = ({ title, description, image, link }) => {
   return (
     <Card sx={{ backgroundColor: 'var(--accent2)', color: 'var(--text)' }}>
       <CardActionArea component="a" href={link} target="_blank" rel="noopener noreferrer" sx={{ '&:hover': { backgroundColor: 'var(--accent2)', color: 'var(--text)' } }}>
+        <CardMedia
+          component="img"
+          height="140px"
+          width="140px"
+          image={image}
+          alt={title}
+          sx={{ objectFit: 'contain', width: '100%', paddingTop: '10px', alignItems: 'center' }}
+        />
         <CardContent>
           <Typography variant="h5" component="div">
             {title}
@@ -13,13 +21,7 @@ const CardItem = ({ title, description, image, link }) => {
             {description}
           </Typography>
         </CardContent>
-        <CardMedia
-          component="img"
-          height="140"
-          image={image}
-          alt={title}
-          sx={{ objectFit: 'contain', width: '100%', paddingBottom: '10px' }}
-        />
+        
       </CardActionArea>
     </Card>
   );

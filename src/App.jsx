@@ -1,7 +1,24 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, Grid, Card, CardContent, CardActions, Button, CardActionArea, CardMedia } from '@mui/material';
 import './App.css'
+import CardItem from './components/CardItem';
 import treeImage from '../src/assets/tree.png';
+import detectSvg from '../src/assets/detect.svg';
+
+const cardItems = [
+  {
+    title: "🔍🐜Ant Find",
+    description: "图像检测Demo",
+    image: detectSvg,
+    link: "https://labs.antknt47.com/ant-find/",
+  },
+  {
+    title: "Ant Visual Tree",
+    description: "二叉树可视化工具",
+    image: treeImage,
+    link: "https://labs.antknt47.com/ant-visual-tree",
+  },
+];
 
 const HomePage = () => {
   return (
@@ -18,27 +35,16 @@ const HomePage = () => {
       {/* Main container */}
       <Container sx={{ paddingTop: 4, marginLeft: 0, maxWidth: '100%' }}>
         <Grid container spacing={4}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card sx={{ backgroundColor: 'var(--accent2)', color: 'var(--text)'}} >
-              <CardActionArea component="a" href="https://labs.antknt47.com/ant-visual-tree" target="_blank" rel="noopener noreferrer" sx={{ '&:hover': { backgroundColor: 'var(--accent2)', color: 'var(--text)' } }}>
-                <CardContent >
-                  <Typography variant="h5" component="div">
-                    Ant Visual Tree
-                  </Typography>
-                  <Typography variant="body2" color='var(--accent3)'>
-                    二叉树可视化工具
-                  </Typography>
-                </CardContent>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={treeImage}
-                  alt="Ant visual tree"
-                  sx={{ objectFit: 'contain', width: '100%', paddingBottom: '10px'}}
-                />
-              </CardActionArea>              
-            </Card>
+        {cardItems.map((item, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <CardItem 
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              link={item.link}
+            />
           </Grid>
+        ))}
         </Grid>
       </Container>
     </div>
