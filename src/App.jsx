@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Container, Grid, Button, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, Container, Grid, Button, Menu, MenuItem, Box } from '@mui/material';
 import './App.css';
 import CardItem from './components/CardItem';
 import treeImage from '../src/assets/tree.png';
@@ -50,25 +50,27 @@ const App = () => {
           </Typography>
 
           {/* Language Switcher */}
-          <Button
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-            color="inherit"
-          >
-            {t('Language')}
-          </Button>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
-            <MenuItem onClick={() => changeLanguage('zh')}>中文</MenuItem>
-            <MenuItem onClick={() => changeLanguage('ja')}>日本語</MenuItem>
-          </Menu>
+          <Box sx={{ position: 'absolute', right: 16 }}>
+            <Button
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              onClick={handleClick}
+              color="inherit"
+            >
+              🌐{t('Language')}
+            </Button>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
+              <MenuItem onClick={() => changeLanguage('zh')}>中文</MenuItem>
+              <MenuItem onClick={() => changeLanguage('ja')}>日本語</MenuItem>
+            </Menu>
+          </Box>
         </Toolbar>
       </AppBar>
 

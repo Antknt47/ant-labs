@@ -7,7 +7,8 @@ const resources = {
       "Ant Find": "Ant Find",
       "Image Detection Demo": "Image Detection Demo",
       "Ant Visual Tree": "Ant Visual Tree",
-      "Binary Tree Visualization Tool": "Binary Tree Visualization Tool"
+      "Binary Tree Visualization Tool": "Binary Tree Visualization Tool",
+      "Language": "English"
     }
   },
   zh: {
@@ -15,7 +16,8 @@ const resources = {
       "Ant Find": "🔍🐜蚂蚁发现",
       "Image Detection Demo": "图像检测Demo",
       "Ant Visual Tree": "蚂蚁可视化树",
-      "Binary Tree Visualization Tool": "二叉树可视化工具"
+      "Binary Tree Visualization Tool": "二叉树可视化工具",
+      "Language": "中文(简体)"
     }
   },
   ja: {
@@ -23,7 +25,8 @@ const resources = {
       "Ant Find": "🔍🐜アントファインド",
       "Image Detection Demo": "画像検出デモ",
       "Ant Visual Tree": "アント可視化ツリー",
-      "Binary Tree Visualization Tool": "バイナリツリー可視化ツール"
+      "Binary Tree Visualization Tool": "バイナリツリー可視化ツール",
+      "Language": "日本語"
     }
   }
 };
