@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 const resources = {
-  en: {
+  'en-US': {
     translation: {
       "Ant Find": "Ant Find",
       "Image Detection Demo": "Image Detection Demo",
@@ -11,7 +11,7 @@ const resources = {
       "Language": "English"
     }
   },
-  zh: {
+  'zh-CN': {
     translation: {
       "Ant Find": "🔍🐜蚂蚁发现",
       "Image Detection Demo": "图像检测Demo",
@@ -20,7 +20,7 @@ const resources = {
       "Language": "中文(简体)"
     }
   },
-  ja: {
+  'ja-JP': {
     translation: {
       "Ant Find": "🔍🐜アントファインド",
       "Image Detection Demo": "画像検出デモ",
@@ -31,11 +31,13 @@ const resources = {
   }
 };
 
+const userLang = navigator.language || navigator.userLanguage;
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', 
+    lng: userLang, 
     interpolation: {
       escapeValue: false
     }

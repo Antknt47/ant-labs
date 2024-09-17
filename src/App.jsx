@@ -5,8 +5,7 @@ import CardItem from './components/CardItem';
 import treeImage from '../src/assets/tree.png';
 import detectSvg from '../src/assets/detect.svg';
 import { useTranslation } from 'react-i18next';
-import i18n from 'i18next';
-import './i18n';
+import i18n from './i18n';
 
 const cardItems = [
   {
@@ -66,9 +65,9 @@ const App = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
-              <MenuItem onClick={() => changeLanguage('zh')}>中文</MenuItem>
-              <MenuItem onClick={() => changeLanguage('ja')}>日本語</MenuItem>
+              <MenuItem onClick={() => changeLanguage('en-US')}>English</MenuItem>
+              <MenuItem onClick={() => changeLanguage('zh-CN')}>中文</MenuItem>
+              <MenuItem onClick={() => changeLanguage('ja-JP')}>日本語</MenuItem>
             </Menu>
           </Box>
         </Toolbar>
