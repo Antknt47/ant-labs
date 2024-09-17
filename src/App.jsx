@@ -1,5 +1,3 @@
-// src/pages/HomePage.jsx
-
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, Grid, Card, CardContent, CardActions, Button, CardActionArea, CardMedia } from '@mui/material';
 import './App.css'
@@ -8,16 +6,16 @@ import treeImage from '../src/assets/tree.png';
 const HomePage = () => {
   return (
     <div>
-      {/* 导航栏 */}
+      {/* Nav bar */}
       <AppBar position="static" sx={{ backgroundColor: 'var(--accent2)', color: 'var(--text)' }}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center', userSelect: 'none' }}>
             Ant Labs
           </Typography>
         </Toolbar>
       </AppBar>
 
-      {/* 主体内容 */}
+      {/* Main container */}
       <Container sx={{ paddingTop: 4, marginLeft: 0, maxWidth: '100%' }}>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6} md={4}>
@@ -34,7 +32,7 @@ const HomePage = () => {
                 <CardMedia
                   component="img"
                   height="140"
-                  image={treeImage}  // 替换为你的图片 URL
+                  image={treeImage}
                   alt="Ant visual tree"
                   sx={{ objectFit: 'contain', width: '100%', paddingBottom: '10px'}}
                 />
