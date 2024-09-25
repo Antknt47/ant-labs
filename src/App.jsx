@@ -4,10 +4,17 @@ import './App.css';
 import CardItem from './components/CardItem';
 import treeImage from '../src/assets/tree.png';
 import detectSvg from '../src/assets/detect.svg';
+import compassSvg from '../src/assets/compass.svg';
 import { useTranslation } from 'react-i18next';
 import i18n from './i18n';
 
 const cardItems = [
+  {
+    title: "Ant Nav",
+    description: "Real-time GPS and IMU Dashboard",
+    image: compassSvg,
+    link: "https://labs.antknt47.com/ant-nav/",
+  },
   {
     title: "Ant Find",
     description: "Image Detection Demo",
