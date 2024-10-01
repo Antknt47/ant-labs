@@ -1,8 +1,22 @@
-# React + Vite
+# Ant Labs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Ant Labs** is a web-based project deployed on GitHub Pages. It serves as a navigation hub for various web projects that aim to explore and validate front-end technologies.
+[https://labs.antknt47.com](https://labs.antknt47.com)
+![demo](screen-shot.png "Scren shot")
 
-Currently, two official plugins are available:
+## Features
+- A central hub for navigating to different web projects that demonstrate front-end techniques.
+- Deployed on **GitHub Pages** for easy access and usage.
+- Includes links to various experiments and implementations in front-end development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology Stack
+- **React**: Used to build the user interface.
+- **Vite**: Used for fast development and efficient builds.
+- **JavaScript (JS)**: The main programming language for the project.
+
+## Demo
+The project is deployed on GitHub Pages at:
+[Insert Demo Link Here]
+
+## License
+This project is licensed under the [MIT License](LICENSE).
